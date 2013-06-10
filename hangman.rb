@@ -9,10 +9,6 @@ class Hangman
 		@guesses = []
 	end
 
-	#def board
-	#	return [@puzzle, @guesses, @chances]
-	#end
-
 	def show_letter(letter)
 		index = -1
 		@word.each_char do |c|
@@ -30,17 +26,13 @@ class Hangman
 	end
 
 	def evaluate(letter)
-		if  not @word.include? letter
-			@guesses << letter
+		if  !@word.include? letter
 			@chances -= 1
+			@guesses << letter
 		else 
 
 			show_letter(letter)
-			# @word.each_char do |c|
-			# 	if c == letter
-			# 		@puzzle[@word.index(c)] = c
-			# 	end
-			# end
+		
 		end 
 	end
 end

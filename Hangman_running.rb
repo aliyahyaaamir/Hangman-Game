@@ -6,7 +6,7 @@ class HangmanRunning
 		game = Hangman.new
 		guesses = []
 		chances = 8
-		#puzzle = game.board[0] 
+
 		while (((game.puzzle).include? "_") && (game.chances != 0))
 			puts 'Guess the letters for the word below'
 			puts "         #{game.puzzle}"	
@@ -18,10 +18,7 @@ class HangmanRunning
 			else
 				puts "Entered an invalid letter!"
 			end
-			#info = game.board
-			#puzzle = info[0]
-			#guesses = info[1]
-			#chances = info[2]
+
 		end
 		if (game.puzzle).include? "_"
 			puts "Sorry you've lost the game.....Try again maybe?"
@@ -29,8 +26,6 @@ class HangmanRunning
 			puts "Congratulations! You've won!!"
 		end
 	end
-
-
 
 end
 
